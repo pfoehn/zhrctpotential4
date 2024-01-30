@@ -1,0 +1,1374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="4.0" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMUNICATION',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Communication.v1" Alias="Communication"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_PERSONALDATA',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.PersonalData.v1" Alias="PersonalData"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_ANALYTICS',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Analytics.v1" Alias="Analytics"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="SAP__common"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_MEASURES',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="Org.OData.Measures.V1" Alias="SAP__measures"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_CORE',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="Org.OData.Core.V1" Alias="SAP__core"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_CAPABILITIES',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="Org.OData.Capabilities.V1" Alias="SAP__capabilities"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_AGGREGATION',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="Org.OData.Aggregation.V1" Alias="SAP__aggregation"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_VALIDATION',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="Org.OData.Validation.V1" Alias="SAP__validation"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_CODELIST',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.CodeList.v1" Alias="SAP__CodeList"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_UI',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="SAP__UI"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_HTML5',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.HTML5.v1" Alias="SAP__HTML5"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_PDF',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.PDF.v1" Alias="SAP__PDF"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_SESSION',Version='0001',SAP__Origin='LOCAL')/$value">
+        <edmx:Include Namespace="com.sap.vocabularies.Session.v1" Alias="SAP__session"/>
+    </edmx:Reference>
+    <edmx:DataServices>
+        <Schema Namespace="com.sap.gateway.srvd.zui_ct_potential.v0001" Alias="SAP__self">
+            <Annotation Term="SAP__core.SchemaVersion" String="1.0.0"/>
+            <EntityType Name="ZHRCT_C_CASE_ABWESENHEITType">
+                <Key>
+                    <PropertyRef Name="CaseNr"/>
+                    <PropertyRef Name="Pernr"/>
+                </Key>
+                <Property Name="CaseNr" Type="Edm.String" Nullable="false" MaxLength="10"/>
+                <Property Name="Pernr" Type="Edm.String" Nullable="false" MaxLength="8"/>
+                <Property Name="ReportingDate" Type="Edm.Date"/>
+                <Property Name="StatusBez" Type="Edm.String" Nullable="false" MaxLength="30"/>
+                <Property Name="TeamBez" Type="Edm.String" Nullable="false" MaxLength="30"/>
+                <Property Name="HrPartner" Type="Edm.String" Nullable="false" MaxLength="80"/>
+                <Property Name="ResultBez" Type="Edm.String" Nullable="false" MaxLength="30"/>
+                <Property Name="CaseResultDate" Type="Edm.Date"/>
+            </EntityType>
+            <EntityType Name="zhrct_b_casecmpspType">
+                <Key>
+                    <PropertyRef Name="Pernr"/>
+                    <PropertyRef Name="Begda"/>
+                    <PropertyRef Name="Endda"/>
+                </Key>
+                <Property Name="Pernr" Type="Edm.String" Nullable="false" MaxLength="8"/>
+                <Property Name="Begda" Type="Edm.Date" Nullable="false"/>
+                <Property Name="Endda" Type="Edm.Date" Nullable="false"/>
+                <Property Name="AnzTage" Type="Edm.Int32" Nullable="false"/>
+                <Property Name="Kst01" Type="Edm.String" Nullable="false" MaxLength="5"/>
+                <Property Name="Psp01" Type="Edm.String" Nullable="false" MaxLength="12"/>
+                <Property Name="Kpr01" Type="Edm.Decimal" Nullable="false" Precision="5" Scale="2"/>
+                <Property Name="Kst02" Type="Edm.String" Nullable="false" MaxLength="5"/>
+                <Property Name="Psp02" Type="Edm.String" Nullable="false" MaxLength="12"/>
+                <Property Name="Kpr02" Type="Edm.Decimal" Nullable="false" Precision="5" Scale="2"/>
+                <Property Name="Kst03" Type="Edm.String" Nullable="false" MaxLength="5"/>
+                <Property Name="Psp03" Type="Edm.String" Nullable="false" MaxLength="12"/>
+                <Property Name="Kpr03" Type="Edm.Decimal" Nullable="false" Precision="5" Scale="2"/>
+            </EntityType>
+            <EntityType Name="ZHRCT_C_POTENTIAL_CASEType">
+                <Key>
+                    <PropertyRef Name="Pernr"/>
+                    <PropertyRef Name="Begda"/>
+                    <PropertyRef Name="Endda"/>
+                </Key>
+                <Property Name="Pernr" Type="Edm.String" Nullable="false" MaxLength="8"/>
+                <Property Name="Begda" Type="Edm.Date" Nullable="false"/>
+                <Property Name="Endda" Type="Edm.Date" Nullable="false"/>
+                <Property Name="AnzTage" Type="Edm.Int32" Nullable="false"/>
+                <Property Name="personid_ext" Type="Edm.String" Nullable="false" MaxLength="20"/>
+                <Property Name="Nachn" Type="Edm.String" Nullable="false" MaxLength="40"/>
+                <Property Name="Vorna" Type="Edm.String" Nullable="false" MaxLength="40"/>
+                <Property Name="NachnVorna" Type="Edm.String" Nullable="false" MaxLength="80"/>
+                <Property Name="Persk" Type="Edm.String" Nullable="false" MaxLength="2"/>
+                <Property Name="Persk_txt" Type="Edm.String" Nullable="false" MaxLength="20"/>
+                <Property Name="Plans_txt" Type="Edm.String" Nullable="false" MaxLength="12"/>
+                <Property Name="Plans_stext" Type="Edm.String" Nullable="false" MaxLength="40"/>
+                <Property Name="Bsgrd" Type="Edm.Decimal" Nullable="false" Precision="5" Scale="2"/>
+                <Property Name="Gbdat" Type="Edm.Date"/>
+                <Property Name="GESCH" Type="Edm.String" Nullable="false" MaxLength="1"/>
+                <Property Name="GESCH_TXT" Type="Edm.String" Nullable="false" MaxLength="10"/>
+                <Property Name="EINTRITT" Type="Edm.Date"/>
+                <Property Name="AUSTRITT" Type="Edm.Date"/>
+                <Property Name="SBPERNR" Type="Edm.String" Nullable="false" MaxLength="8"/>
+                <Property Name="SBNAME" Type="Edm.String" Nullable="false" MaxLength="80"/>
+                <Property Name="PCPERNR" Type="Edm.String" Nullable="false" MaxLength="8"/>
+                <Property Name="PCNAME" Type="Edm.String" Nullable="false" MaxLength="80"/>
+                <Property Name="VGPERNR" Type="Edm.String" Nullable="false" MaxLength="8"/>
+                <Property Name="VGNAME" Type="Edm.String" Nullable="false" MaxLength="80"/>
+                <Property Name="HIERARCHY_SHORT_1" Type="Edm.String" Nullable="false" MaxLength="12"/>
+                <Property Name="HIERARCHY_STEXT_1" Type="Edm.String" Nullable="false" MaxLength="40"/>
+                <Property Name="HIERARCHY_SHORT_2" Type="Edm.String" Nullable="false" MaxLength="12"/>
+                <Property Name="HIERARCHY_STEXT_2" Type="Edm.String" Nullable="false" MaxLength="40"/>
+                <Property Name="ORGEHSHORT" Type="Edm.String" Nullable="false" MaxLength="12"/>
+                <Property Name="ORGEHSTEXT" Type="Edm.String" Nullable="false" MaxLength="40"/>
+                <NavigationProperty Name="_Abwesenheiten" Type="Collection(com.sap.gateway.srvd.zui_ct_potential.v0001.ZHRCT_B_CASECMABSType)"/>
+                <NavigationProperty Name="_Cases" Type="Collection(com.sap.gateway.srvd.zui_ct_potential.v0001.ZHRCT_C_CASE_ABWESENHEITType)"/>
+                <NavigationProperty Name="_Finanzierungen" Type="Collection(com.sap.gateway.srvd.zui_ct_potential.v0001.zhrct_b_casecmpspType)"/>
+            </EntityType>
+            <EntityType Name="ZHRCT_B_CASECMABSType">
+                <Key>
+                    <PropertyRef Name="Pernr"/>
+                    <PropertyRef Name="Begda"/>
+                    <PropertyRef Name="Endda"/>
+                </Key>
+                <Property Name="Pernr" Type="Edm.String" Nullable="false" MaxLength="8"/>
+                <Property Name="Begda" Type="Edm.Date" Nullable="false"/>
+                <Property Name="Endda" Type="Edm.Date" Nullable="false"/>
+                <Property Name="AnzTage" Type="Edm.Int32" Nullable="false"/>
+                <Property Name="Abw9000" Type="Edm.Boolean" Nullable="false"/>
+                <Property Name="Abw9000Prozent" Type="Edm.Decimal" Nullable="false" Precision="5" Scale="2"/>
+                <Property Name="Abw9010" Type="Edm.Boolean" Nullable="false"/>
+                <Property Name="Abw9010Prozent" Type="Edm.Decimal" Nullable="false" Precision="5" Scale="2"/>
+            </EntityType>
+            <EntityContainer Name="Container">
+                <EntitySet Name="ZHRCT_B_CASECMABS" EntityType="com.sap.gateway.srvd.zui_ct_potential.v0001.ZHRCT_B_CASECMABSType"/>
+                <EntitySet Name="zhrct_b_casecmpsp" EntityType="com.sap.gateway.srvd.zui_ct_potential.v0001.zhrct_b_casecmpspType"/>
+                <EntitySet Name="ZHRCT_C_CASE_ABWESENHEIT" EntityType="com.sap.gateway.srvd.zui_ct_potential.v0001.ZHRCT_C_CASE_ABWESENHEITType"/>
+                <EntitySet Name="ZHRCT_C_POTENTIAL_CASE" EntityType="com.sap.gateway.srvd.zui_ct_potential.v0001.ZHRCT_C_POTENTIAL_CASEType">
+                    <NavigationPropertyBinding Path="_Abwesenheiten" Target="ZHRCT_B_CASECMABS"/>
+                    <NavigationPropertyBinding Path="_Cases" Target="ZHRCT_C_CASE_ABWESENHEIT"/>
+                    <NavigationPropertyBinding Path="_Finanzierungen" Target="zhrct_b_casecmpsp"/>
+                </EntitySet>
+            </EntityContainer>
+            <Annotations Target="SAP__self.ZHRCT_C_CASE_ABWESENHEITType/CaseNr">
+                <Annotation Term="SAP__common.Label" String="CaseNr"/>
+                <Annotation Term="SAP__common.QuickInfo" String="CaseNr"/>
+                <Annotation Term="SAP__common.IsDigitSequence"/>
+                <Annotation Term="SAP__common.Heading" String="Case Nr."/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZHRCT_C_CASE_ABWESENHEITType/Pernr">
+                <Annotation Term="SAP__common.Label" String="Pernr"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Pernr"/>
+                <Annotation Term="SAP__common.IsDigitSequence"/>
+                <Annotation Term="SAP__common.Heading" String="Personalnr"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZHRCT_C_CASE_ABWESENHEITType/ReportingDate">
+                <Annotation Term="SAP__common.Label" String="Gemeldet am"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Gemeldet am"/>
+                <Annotation Term="SAP__common.Heading" String="Meldedatum"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZHRCT_C_CASE_ABWESENHEITType/StatusBez">
+                <Annotation Term="SAP__common.Label" String="Status"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Status"/>
+                <Annotation Term="SAP__common.Heading" String="Bezeichnung"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZHRCT_C_CASE_ABWESENHEITType/TeamBez">
+                <Annotation Term="SAP__common.Label" String="Case bei Team"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Case bei Team"/>
+                <Annotation Term="SAP__UI.HiddenFilter"/>
+                <Annotation Term="SAP__common.Heading" String="Bezeichnung"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZHRCT_C_CASE_ABWESENHEITType/HrPartner">
+                <Annotation Term="SAP__common.Label" String="HR Partner/in"/>
+                <Annotation Term="SAP__common.QuickInfo" String="HR Partner/in"/>
+                <Annotation Term="SAP__core.Computed"/>
+                <Annotation Term="SAP__common.Heading" String="Vollständiger Name"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZHRCT_C_CASE_ABWESENHEITType/ResultBez">
+                <Annotation Term="SAP__common.Label" String="Ergebnis"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Ergebnis"/>
+                <Annotation Term="SAP__common.Heading" String="Bezeichnung"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZHRCT_C_CASE_ABWESENHEITType/CaseResultDate">
+                <Annotation Term="SAP__common.Label" String="Datum"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Datum"/>
+                <Annotation Term="SAP__common.Heading" String="Ergebnis Datum"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZHRCT_C_CASE_ABWESENHEITType">
+                <Annotation Term="SAP__common.Label" String="Liste Cases für Abwesenheiten"/>
+                <Annotation Term="SAP__UI.HeaderInfo">
+                    <Record>
+                        <PropertyValue Property="TypeName" String="Case"/>
+                        <PropertyValue Property="TypeNamePlural" String="Cases"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__UI.LineItem" Qualifier="Case">
+                    <Collection>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Case"/>
+                            <PropertyValue Property="Value" Path="CaseNr"/>
+                            <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Gemeldet am"/>
+                            <PropertyValue Property="Value" Path="ReportingDate"/>
+                            <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Status"/>
+                            <PropertyValue Property="Value" Path="StatusBez"/>
+                            <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Case bei Team"/>
+                            <PropertyValue Property="Value" Path="TeamBez"/>
+                            <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="HR Partner/in"/>
+                            <PropertyValue Property="Value" Path="HrPartner"/>
+                            <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Ergebnis"/>
+                            <PropertyValue Property="Value" Path="ResultBez"/>
+                            <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="am"/>
+                            <PropertyValue Property="Value" Path="CaseResultDate"/>
+                            <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="SAP__UI.PresentationVariant">
+                    <Record>
+                        <PropertyValue Property="SortOrder">
+                            <Collection>
+                                <Record Type="SAP__common.SortOrderType">
+                                    <PropertyValue Property="Property" PropertyPath="CaseNr"/>
+                                    <PropertyValue Property="Descending" Bool="true"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="SAP__self.Container/ZHRCT_C_CASE_ABWESENHEIT">
+                <Annotation Term="SAP__capabilities.SearchRestrictions">
+                    <Record>
+                        <PropertyValue Property="Searchable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.InsertRestrictions">
+                    <Record>
+                        <PropertyValue Property="Insertable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.DeleteRestrictions">
+                    <Record>
+                        <PropertyValue Property="Deletable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.UpdateRestrictions">
+                    <Record>
+                        <PropertyValue Property="Updatable" Bool="false"/>
+                        <PropertyValue Property="QueryOptions">
+                            <Record>
+                                <PropertyValue Property="SelectSupported" Bool="true"/>
+                            </Record>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__core.OptimisticConcurrency">
+                    <Collection/>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="SAP__self.zhrct_b_casecmpspType/Pernr">
+                <Annotation Term="SAP__common.Label" String="Vertrag Nr."/>
+                <Annotation Term="SAP__common.QuickInfo" String="Vertrag Nr."/>
+                <Annotation Term="SAP__common.IsDigitSequence"/>
+                <Annotation Term="SAP__common.Heading" String="PersNr"/>
+            </Annotations>
+            <Annotations Target="SAP__self.zhrct_b_casecmpspType/Begda">
+                <Annotation Term="SAP__common.Label" String="Beginn"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Beginn"/>
+                <Annotation Term="SAP__common.Heading" String="Beginn"/>
+            </Annotations>
+            <Annotations Target="SAP__self.zhrct_b_casecmpspType/Endda">
+                <Annotation Term="SAP__common.Label" String="Ende"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Ende"/>
+                <Annotation Term="SAP__common.Heading" String="Ende"/>
+            </Annotations>
+            <Annotations Target="SAP__self.zhrct_b_casecmpspType/AnzTage">
+                <Annotation Term="SAP__common.Label" String="Anzahl Tage"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Anzahl Tage"/>
+            </Annotations>
+            <Annotations Target="SAP__self.zhrct_b_casecmpspType/Kst01">
+                <Annotation Term="SAP__common.Label" String="KST 1"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Kostenstelle 1"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Heading" String="Kostenstelle"/>
+            </Annotations>
+            <Annotations Target="SAP__self.zhrct_b_casecmpspType/Psp01">
+                <Annotation Term="SAP__common.Label" String="PSP 1"/>
+                <Annotation Term="SAP__common.QuickInfo" String="PSP 1"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Heading" String="PSP"/>
+            </Annotations>
+            <Annotations Target="SAP__self.zhrct_b_casecmpspType/Kpr01">
+                <Annotation Term="SAP__common.Label" String="%"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Prozent 1"/>
+                <Annotation Term="SAP__common.Heading" String="Vertrags-BG ETHZ"/>
+            </Annotations>
+            <Annotations Target="SAP__self.zhrct_b_casecmpspType/Kst02">
+                <Annotation Term="SAP__common.Label" String="KST 2"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Kostenstelle 2"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Heading" String="Kostenstelle"/>
+            </Annotations>
+            <Annotations Target="SAP__self.zhrct_b_casecmpspType/Psp02">
+                <Annotation Term="SAP__common.Label" String="PSP 2"/>
+                <Annotation Term="SAP__common.QuickInfo" String="PSP 2"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Heading" String="PSP"/>
+            </Annotations>
+            <Annotations Target="SAP__self.zhrct_b_casecmpspType/Kpr02">
+                <Annotation Term="SAP__common.Label" String="%"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Prozent 2"/>
+                <Annotation Term="SAP__common.Heading" String="Vertrags-BG ETHZ"/>
+            </Annotations>
+            <Annotations Target="SAP__self.zhrct_b_casecmpspType/Kst03">
+                <Annotation Term="SAP__common.Label" String="KST 3"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Kostenstelle 3"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Heading" String="Kostenstelle"/>
+            </Annotations>
+            <Annotations Target="SAP__self.zhrct_b_casecmpspType/Psp03">
+                <Annotation Term="SAP__common.Label" String="PSP 3"/>
+                <Annotation Term="SAP__common.QuickInfo" String="PSP 3"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Heading" String="PSP"/>
+            </Annotations>
+            <Annotations Target="SAP__self.zhrct_b_casecmpspType/Kpr03">
+                <Annotation Term="SAP__common.Label" String="%"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Prozent 3"/>
+                <Annotation Term="SAP__common.Heading" String="Vertrags-BG ETHZ"/>
+            </Annotations>
+            <Annotations Target="SAP__self.zhrct_b_casecmpspType">
+                <Annotation Term="SAP__common.Label" String="Überbrücksfinanzierung CM"/>
+                <Annotation Term="SAP__UI.HeaderInfo">
+                    <Record>
+                        <PropertyValue Property="TypeName" String="Überbrückungsfinanzierung"/>
+                        <PropertyValue Property="TypeNamePlural" String="Überbrückungsfinanzierungen"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__UI.LineItem" Qualifier="Finanzierung">
+                    <Collection>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Von"/>
+                            <PropertyValue Property="Value" Path="Begda"/>
+                            <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Bis"/>
+                            <PropertyValue Property="Value" Path="Endda"/>
+                            <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Anzahl Tage"/>
+                            <PropertyValue Property="Value" Path="AnzTage"/>
+                            <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="PSP 1"/>
+                            <PropertyValue Property="Value" Path="Psp01"/>
+                            <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="KOSTL 1"/>
+                            <PropertyValue Property="Value" Path="Kst01"/>
+                            <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Prozent 1"/>
+                            <PropertyValue Property="Value" Path="Kpr01"/>
+                            <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="KOSTL 2"/>
+                            <PropertyValue Property="Value" Path="Kst02"/>
+                            <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="PSP 2"/>
+                            <PropertyValue Property="Value" Path="Psp02"/>
+                            <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Prozent 2"/>
+                            <PropertyValue Property="Value" Path="Kpr02"/>
+                            <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="KOSTL 3"/>
+                            <PropertyValue Property="Value" Path="Kst03"/>
+                            <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="PSP 3"/>
+                            <PropertyValue Property="Value" Path="Psp03"/>
+                            <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Prozent 3"/>
+                            <PropertyValue Property="Value" Path="Kpr03"/>
+                            <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="SAP__UI.PresentationVariant">
+                    <Record>
+                        <PropertyValue Property="SortOrder">
+                            <Collection>
+                                <Record Type="SAP__common.SortOrderType">
+                                    <PropertyValue Property="Property" PropertyPath="Begda"/>
+                                    <PropertyValue Property="Descending" Bool="false"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Communication.Contact">
+                    <Record/>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="SAP__self.Container/zhrct_b_casecmpsp">
+                <Annotation Term="SAP__capabilities.SearchRestrictions">
+                    <Record>
+                        <PropertyValue Property="Searchable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.InsertRestrictions">
+                    <Record>
+                        <PropertyValue Property="Insertable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.DeleteRestrictions">
+                    <Record>
+                        <PropertyValue Property="Deletable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.UpdateRestrictions">
+                    <Record>
+                        <PropertyValue Property="Updatable" Bool="false"/>
+                        <PropertyValue Property="QueryOptions">
+                            <Record>
+                                <PropertyValue Property="SelectSupported" Bool="true"/>
+                            </Record>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__core.OptimisticConcurrency">
+                    <Collection/>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.FilterRestrictions">
+                    <Record>
+                        <PropertyValue Property="FilterExpressionRestrictions">
+                            <Collection>
+                                <Record>
+                                    <PropertyValue Property="Property" PropertyPath="Kst01"/>
+                                    <PropertyValue Property="AllowedExpressions" String="MultiValue"/>
+                                </Record>
+                                <Record>
+                                    <PropertyValue Property="Property" PropertyPath="Psp01"/>
+                                    <PropertyValue Property="AllowedExpressions" String="MultiValue"/>
+                                </Record>
+                                <Record>
+                                    <PropertyValue Property="Property" PropertyPath="Kst02"/>
+                                    <PropertyValue Property="AllowedExpressions" String="MultiValue"/>
+                                </Record>
+                                <Record>
+                                    <PropertyValue Property="Property" PropertyPath="Psp02"/>
+                                    <PropertyValue Property="AllowedExpressions" String="MultiValue"/>
+                                </Record>
+                                <Record>
+                                    <PropertyValue Property="Property" PropertyPath="Kst03"/>
+                                    <PropertyValue Property="AllowedExpressions" String="MultiValue"/>
+                                </Record>
+                                <Record>
+                                    <PropertyValue Property="Property" PropertyPath="Psp03"/>
+                                    <PropertyValue Property="AllowedExpressions" String="MultiValue"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="SAP__self.ZHRCT_C_POTENTIAL_CASEType/Pernr">
+                <Annotation Term="SAP__common.IsDigitSequence"/>
+                <Annotation Term="SAP__common.Label" String="Personalnummer"/>
+                <Annotation Term="SAP__common.Heading" String="PersNr"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZHRCT_C_POTENTIAL_CASEType/personid_ext">
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="Persid"/>
+                <Annotation Term="SAP__common.QuickInfo" String="PersonID CHAR20 ohne Conversion Exit"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZHRCT_C_POTENTIAL_CASEType/Persk">
+                <Annotation Term="SAP__common.Text" Path="Persk_txt">
+                    <Annotation Term="SAP__UI.TextArrangement" EnumMember="SAP__UI.TextArrangementType/TextFirst"/>
+                </Annotation>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="Mitarbeiterkreis Nr"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Mitarbeiterkreis Nummer"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZHRCT_C_POTENTIAL_CASEType/Plans_txt">
+                <Annotation Term="SAP__common.Text" Path="Plans_stext">
+                    <Annotation Term="SAP__UI.TextArrangement" EnumMember="SAP__UI.TextArrangementType/TextFirst"/>
+                </Annotation>
+                <Annotation Term="SAP__common.Label" String="Funktion"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZHRCT_C_POTENTIAL_CASEType/GESCH">
+                <Annotation Term="SAP__common.Text" Path="GESCH_TXT">
+                    <Annotation Term="SAP__UI.TextArrangement" EnumMember="SAP__UI.TextArrangementType/TextFirst"/>
+                </Annotation>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Label" String="Geschlecht"/>
+                <Annotation Term="SAP__common.Heading" String="Gsch"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Geschlechtsschluessel"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZHRCT_C_POTENTIAL_CASEType/SBPERNR">
+                <Annotation Term="SAP__common.Text" Path="SBNAME">
+                    <Annotation Term="SAP__UI.TextArrangement" EnumMember="SAP__UI.TextArrangementType/TextFirst"/>
+                </Annotation>
+                <Annotation Term="SAP__common.IsDigitSequence"/>
+                <Annotation Term="SAP__common.Label" String="Sachbearbeiter Pernr"/>
+                <Annotation Term="SAP__common.QuickInfo" String="SB Pernr"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZHRCT_C_POTENTIAL_CASEType/PCPERNR">
+                <Annotation Term="SAP__common.Text" Path="PCNAME">
+                    <Annotation Term="SAP__UI.TextArrangement" EnumMember="SAP__UI.TextArrangementType/TextFirst"/>
+                </Annotation>
+                <Annotation Term="SAP__common.IsDigitSequence"/>
+                <Annotation Term="SAP__common.Label" String="HR Partner Pernr"/>
+                <Annotation Term="SAP__common.QuickInfo" String="PC Pernr"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZHRCT_C_POTENTIAL_CASEType/VGPERNR">
+                <Annotation Term="SAP__common.Text" Path="VGNAME">
+                    <Annotation Term="SAP__UI.TextArrangement" EnumMember="SAP__UI.TextArrangementType/TextFirst"/>
+                </Annotation>
+                <Annotation Term="SAP__common.IsDigitSequence"/>
+                <Annotation Term="SAP__common.Label" String="Vorgesetzer Pernr"/>
+                <Annotation Term="SAP__common.QuickInfo" String="VG Personalnummer"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZHRCT_C_POTENTIAL_CASEType/HIERARCHY_SHORT_1">
+                <Annotation Term="SAP__common.Text" Path="HIERARCHY_STEXT_1">
+                    <Annotation Term="SAP__UI.TextArrangement" EnumMember="SAP__UI.TextArrangementType/TextFirst"/>
+                </Annotation>
+                <Annotation Term="SAP__common.Label" String="Leitzahl Departement"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZHRCT_C_POTENTIAL_CASEType/HIERARCHY_SHORT_2">
+                <Annotation Term="SAP__common.Text" Path="HIERARCHY_STEXT_2">
+                    <Annotation Term="SAP__UI.TextArrangement" EnumMember="SAP__UI.TextArrangementType/TextFirst"/>
+                </Annotation>
+                <Annotation Term="SAP__common.Label" String="Leitzahl Institut"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZHRCT_C_POTENTIAL_CASEType/ORGEHSHORT">
+                <Annotation Term="SAP__common.Text" Path="ORGEHSTEXT">
+                    <Annotation Term="SAP__UI.TextArrangement" EnumMember="SAP__UI.TextArrangementType/TextFirst"/>
+                </Annotation>
+                <Annotation Term="SAP__common.Label" String="Leitzahl Professur"/>
+            </Annotations>
+            <Annotations Target="SAP__self.Container/ZHRCT_C_POTENTIAL_CASE">
+                <Annotation Term="SAP__capabilities.NavigationRestrictions">
+                    <Record>
+                        <PropertyValue Property="RestrictedProperties">
+                            <Collection>
+                                <Record>
+                                    <PropertyValue Property="NavigationProperty" NavigationPropertyPath="_Abwesenheiten"/>
+                                    <PropertyValue Property="InsertRestrictions">
+                                        <Record>
+                                            <PropertyValue Property="Insertable" Bool="false"/>
+                                        </Record>
+                                    </PropertyValue>
+                                </Record>
+                                <Record>
+                                    <PropertyValue Property="NavigationProperty" NavigationPropertyPath="_Cases"/>
+                                    <PropertyValue Property="InsertRestrictions">
+                                        <Record>
+                                            <PropertyValue Property="Insertable" Bool="false"/>
+                                        </Record>
+                                    </PropertyValue>
+                                </Record>
+                                <Record>
+                                    <PropertyValue Property="NavigationProperty" NavigationPropertyPath="_Finanzierungen"/>
+                                    <PropertyValue Property="InsertRestrictions">
+                                        <Record>
+                                            <PropertyValue Property="Insertable" Bool="false"/>
+                                        </Record>
+                                    </PropertyValue>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.SearchRestrictions">
+                    <Record>
+                        <PropertyValue Property="Searchable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.FilterRestrictions">
+                    <Record>
+                        <PropertyValue Property="Filterable" Bool="true"/>
+                        <PropertyValue Property="FilterExpressionRestrictions">
+                            <Collection>
+                                <Record>
+                                    <PropertyValue Property="Property" PropertyPath="Pernr"/>
+                                    <PropertyValue Property="AllowedExpressions" String="MultiValue"/>
+                                </Record>
+                                <Record>
+                                    <PropertyValue Property="Property" PropertyPath="Nachn"/>
+                                    <PropertyValue Property="AllowedExpressions" String="SingleValue"/>
+                                </Record>
+                                <Record>
+                                    <PropertyValue Property="Property" PropertyPath="NachnVorna"/>
+                                    <PropertyValue Property="AllowedExpressions" String="SingleValue"/>
+                                </Record>
+                                <Record>
+                                    <PropertyValue Property="Property" PropertyPath="Persk"/>
+                                    <PropertyValue Property="AllowedExpressions" String="MultiValue"/>
+                                </Record>
+                                <Record>
+                                    <PropertyValue Property="Property" PropertyPath="PCNAME"/>
+                                    <PropertyValue Property="AllowedExpressions" String="SingleValue"/>
+                                </Record>
+                                <Record>
+                                    <PropertyValue Property="Property" PropertyPath="HIERARCHY_SHORT_1"/>
+                                    <PropertyValue Property="AllowedExpressions" String="MultiValue"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.InsertRestrictions">
+                    <Record>
+                        <PropertyValue Property="Insertable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.DeleteRestrictions">
+                    <Record>
+                        <PropertyValue Property="Deletable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.UpdateRestrictions">
+                    <Record>
+                        <PropertyValue Property="Updatable" Bool="false"/>
+                        <PropertyValue Property="QueryOptions">
+                            <Record>
+                                <PropertyValue Property="SelectSupported" Bool="true"/>
+                            </Record>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__core.OptimisticConcurrency">
+                    <Collection/>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="SAP__self.ZHRCT_C_POTENTIAL_CASEType">
+                <Annotation Term="SAP__common.Label" String="Potential Cases / Langzeitabwesenheiten"/>
+                <Annotation Term="SAP__UI.Facets">
+                    <Collection>
+                        <Record Type="SAP__UI.CollectionFacet">
+                            <PropertyValue Property="Label" String="Potential Case"/>
+                            <PropertyValue Property="ID" String="PotentialCase"/>
+                            <PropertyValue Property="Facets">
+                                <Collection>
+                                    <Record Type="SAP__UI.ReferenceFacet">
+                                        <PropertyValue Property="Label" String="Abwesenheit"/>
+                                        <PropertyValue Property="ID" String="Fieldgroup_Abwesenheit"/>
+                                        <PropertyValue Property="Target" AnnotationPath="@SAP__UI.FieldGroup#Fieldgroup_Abwesenheit"/>
+                                    </Record>
+                                    <Record Type="SAP__UI.ReferenceFacet">
+                                        <PropertyValue Property="Label" String="Mitarbeiter"/>
+                                        <PropertyValue Property="ID" String="Fieldgroup_Person"/>
+                                        <PropertyValue Property="Target" AnnotationPath="@SAP__UI.FieldGroup#Fieldgroup_Person"/>
+                                    </Record>
+                                    <Record Type="SAP__UI.ReferenceFacet">
+                                        <PropertyValue Property="Label" String="Anstellung"/>
+                                        <PropertyValue Property="ID" String="Fieldgroup_Anstellung"/>
+                                        <PropertyValue Property="Target" AnnotationPath="@SAP__UI.FieldGroup#Fieldgroup_Anstellung"/>
+                                    </Record>
+                                    <Record Type="SAP__UI.ReferenceFacet">
+                                        <PropertyValue Property="Label" String="Organisation"/>
+                                        <PropertyValue Property="ID" String="Fieldgroup_Organisation"/>
+                                        <PropertyValue Property="Target" AnnotationPath="@SAP__UI.FieldGroup#Fieldgroup_Organisation"/>
+                                    </Record>
+                                    <Record Type="SAP__UI.ReferenceFacet">
+                                        <PropertyValue Property="Label" String="Ansprechpersonen"/>
+                                        <PropertyValue Property="ID" String="Fieldgroup_HR"/>
+                                        <PropertyValue Property="Target" AnnotationPath="@SAP__UI.FieldGroup#Fieldgroup_HR"/>
+                                    </Record>
+                                </Collection>
+                            </PropertyValue>
+                        </Record>
+                        <Record Type="SAP__UI.CollectionFacet">
+                            <PropertyValue Property="Label" String="Abwesenheiten"/>
+                            <PropertyValue Property="ID" String="ListeAbwesenheiten"/>
+                            <PropertyValue Property="Facets">
+                                <Collection>
+                                    <Record Type="SAP__UI.ReferenceFacet">
+                                        <PropertyValue Property="Label" String="Abwesenheiten"/>
+                                        <PropertyValue Property="ID" String="Abwesenheiten"/>
+                                        <PropertyValue Property="Target" AnnotationPath="_Abwesenheiten/@SAP__UI.LineItem#Abwesenheiten"/>
+                                    </Record>
+                                </Collection>
+                            </PropertyValue>
+                        </Record>
+                        <Record Type="SAP__UI.CollectionFacet">
+                            <PropertyValue Property="Label" String="Überbrückungsfinanzierung"/>
+                            <PropertyValue Property="ID" String="ListeFinanzierungen"/>
+                            <PropertyValue Property="Facets">
+                                <Collection>
+                                    <Record Type="SAP__UI.ReferenceFacet">
+                                        <PropertyValue Property="Label" String=""/>
+                                        <PropertyValue Property="ID" String="Finanzierung"/>
+                                        <PropertyValue Property="Target" AnnotationPath="_Finanzierungen/@SAP__UI.LineItem#Finanzierung"/>
+                                    </Record>
+                                </Collection>
+                            </PropertyValue>
+                        </Record>
+                        <Record Type="SAP__UI.CollectionFacet">
+                            <PropertyValue Property="Label" String="Cases"/>
+                            <PropertyValue Property="ID" String="ListeCases"/>
+                            <PropertyValue Property="Facets">
+                                <Collection>
+                                    <Record Type="SAP__UI.ReferenceFacet">
+                                        <PropertyValue Property="Label" String=""/>
+                                        <PropertyValue Property="ID" String="Cases"/>
+                                        <PropertyValue Property="Target" AnnotationPath="_Cases/@SAP__UI.LineItem#Case"/>
+                                    </Record>
+                                </Collection>
+                            </PropertyValue>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="SAP__UI.FieldGroup" Qualifier="Fieldgroup_Abwesenheit">
+                    <Record>
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Beginn"/>
+                                    <PropertyValue Property="Value" Path="Begda"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Ende"/>
+                                    <PropertyValue Property="Value" Path="Endda"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Anzahl Tage"/>
+                                    <PropertyValue Property="Value" Path="AnzTage"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__UI.FieldGroup" Qualifier="Fieldgroup_Anstellung">
+                    <Record>
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Mitarbeiterkreis"/>
+                                    <PropertyValue Property="Value" Path="Persk"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Funktion"/>
+                                    <PropertyValue Property="Value" Path="Plans_txt"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Bsgrd"/>
+                                    <PropertyValue Property="Value" Path="Bsgrd"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Eintritt"/>
+                                    <PropertyValue Property="Value" Path="EINTRITT"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Austritt"/>
+                                    <PropertyValue Property="Value" Path="AUSTRITT"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__UI.FieldGroup" Qualifier="Fieldgroup_HR">
+                    <Record>
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Sachbearbeiter/in"/>
+                                    <PropertyValue Property="Value" Path="SBNAME"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="HR-Partner/in"/>
+                                    <PropertyValue Property="Value" Path="PCNAME"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Vorgesetzte Person"/>
+                                    <PropertyValue Property="Value" Path="VGNAME"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__UI.FieldGroup" Qualifier="Fieldgroup_Organisation">
+                    <Record>
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Departement"/>
+                                    <PropertyValue Property="Value" Path="HIERARCHY_SHORT_1"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Institut"/>
+                                    <PropertyValue Property="Value" Path="HIERARCHY_SHORT_2"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Professur"/>
+                                    <PropertyValue Property="Value" Path="ORGEHSHORT"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__UI.FieldGroup" Qualifier="Fieldgroup_Person">
+                    <Record>
+                        <PropertyValue Property="Data">
+                            <Collection>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Pernr"/>
+                                    <PropertyValue Property="Value" Path="Pernr"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Persid"/>
+                                    <PropertyValue Property="Value" Path="personid_ext"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Nachname"/>
+                                    <PropertyValue Property="Value" Path="Nachn"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Vorname"/>
+                                    <PropertyValue Property="Value" Path="Vorna"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Geburtsdatum"/>
+                                    <PropertyValue Property="Value" Path="Gbdat"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                                <Record Type="SAP__UI.DataField">
+                                    <PropertyValue Property="Label" String="Geschlecht"/>
+                                    <PropertyValue Property="Value" Path="GESCH_TXT"/>
+                                    <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__UI.HeaderInfo">
+                    <Record>
+                        <PropertyValue Property="TypeName" String="Potential Case"/>
+                        <PropertyValue Property="TypeNamePlural" String="Potential Cases"/>
+                        <PropertyValue Property="Title">
+                            <Record Type="SAP__UI.DataField">
+                                <PropertyValue Property="Value" Path="NachnVorna"/>
+                            </Record>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__UI.Identification">
+                    <Collection>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Value" Path="ORGEHSTEXT"/>
+                            <Annotation Term="SAP__UI.Hidden"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Value" Path="HIERARCHY_STEXT_2"/>
+                            <Annotation Term="SAP__UI.Hidden"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Value" Path="HIERARCHY_STEXT_1"/>
+                            <Annotation Term="SAP__UI.Hidden"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Value" Path="VGPERNR"/>
+                            <Annotation Term="SAP__UI.Hidden"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Value" Path="PCPERNR"/>
+                            <Annotation Term="SAP__UI.Hidden"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Value" Path="SBPERNR"/>
+                            <Annotation Term="SAP__UI.Hidden"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Value" Path="GESCH"/>
+                            <Annotation Term="SAP__UI.Hidden"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Value" Path="Plans_stext"/>
+                            <Annotation Term="SAP__UI.Hidden"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Value" Path="Persk_txt"/>
+                            <Annotation Term="SAP__UI.Hidden"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Value" Path="NachnVorna"/>
+                            <Annotation Term="SAP__UI.Hidden"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="SAP__UI.LineItem">
+                    <Collection>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Pernr"/>
+                            <PropertyValue Property="Value" Path="Pernr"/>
+                            <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Abwesend von"/>
+                            <PropertyValue Property="Value" Path="Begda"/>
+                            <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Abwesend bis"/>
+                            <PropertyValue Property="Value" Path="Endda"/>
+                            <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Anzahl Tage"/>
+                            <PropertyValue Property="Value" Path="AnzTage"/>
+                            <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Name/Vorname"/>
+                            <PropertyValue Property="Value" Path="NachnVorna"/>
+                            <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Mitarbeiterkreis"/>
+                            <PropertyValue Property="Value" Path="Persk"/>
+                            <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="HR-Partner/in"/>
+                            <PropertyValue Property="Value" Path="PCNAME"/>
+                            <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Leitzahl Departement"/>
+                            <PropertyValue Property="Value" Path="HIERARCHY_SHORT_1"/>
+                            <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Institut"/>
+                            <PropertyValue Property="Value" Path="HIERARCHY_SHORT_2"/>
+                            <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/Low"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Professur"/>
+                            <PropertyValue Property="Value" Path="ORGEHSHORT"/>
+                            <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/Low"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Bsgrd"/>
+                            <PropertyValue Property="Value" Path="Bsgrd"/>
+                            <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/Low"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Geburtsdatum"/>
+                            <PropertyValue Property="Value" Path="Gbdat"/>
+                            <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/Low"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Geschlecht"/>
+                            <PropertyValue Property="Value" Path="GESCH_TXT"/>
+                            <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/Low"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Eintritt"/>
+                            <PropertyValue Property="Value" Path="EINTRITT"/>
+                            <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/Low"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Austritt"/>
+                            <PropertyValue Property="Value" Path="AUSTRITT"/>
+                            <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/Low"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Sachbearbeiter/in"/>
+                            <PropertyValue Property="Value" Path="SBNAME"/>
+                            <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/Low"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Vorgesetzte Person"/>
+                            <PropertyValue Property="Value" Path="VGNAME"/>
+                            <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/Low"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Value" Path="personid_ext"/>
+                            <Annotation Term="SAP__UI.Hidden"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Value" Path="Nachn"/>
+                            <Annotation Term="SAP__UI.Hidden"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Value" Path="Vorna"/>
+                            <Annotation Term="SAP__UI.Hidden"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Value" Path="Persk_txt"/>
+                            <Annotation Term="SAP__UI.Hidden"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Value" Path="Plans_txt"/>
+                            <Annotation Term="SAP__UI.Hidden"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Value" Path="Plans_stext"/>
+                            <Annotation Term="SAP__UI.Hidden"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Value" Path="GESCH"/>
+                            <Annotation Term="SAP__UI.Hidden"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Value" Path="SBPERNR"/>
+                            <Annotation Term="SAP__UI.Hidden"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Value" Path="PCPERNR"/>
+                            <Annotation Term="SAP__UI.Hidden"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Value" Path="VGPERNR"/>
+                            <Annotation Term="SAP__UI.Hidden"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Value" Path="HIERARCHY_STEXT_1"/>
+                            <Annotation Term="SAP__UI.Hidden"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Value" Path="HIERARCHY_STEXT_2"/>
+                            <Annotation Term="SAP__UI.Hidden"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Value" Path="ORGEHSTEXT"/>
+                            <Annotation Term="SAP__UI.Hidden"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="SAP__UI.SelectionFields">
+                    <Collection>
+                        <PropertyPath>Pernr</PropertyPath>
+                        <PropertyPath>NachnVorna</PropertyPath>
+                        <PropertyPath>Persk</PropertyPath>
+                        <PropertyPath>PCNAME</PropertyPath>
+                        <PropertyPath>HIERARCHY_SHORT_1</PropertyPath>
+                    </Collection>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="SAP__self.ZHRCT_B_CASECMABSType/Pernr">
+                <Annotation Term="SAP__common.Label" String="Vertrag Nr."/>
+                <Annotation Term="SAP__common.QuickInfo" String="Vertrag Nr."/>
+                <Annotation Term="SAP__common.IsDigitSequence"/>
+                <Annotation Term="SAP__common.Heading" String="PersNr"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZHRCT_B_CASECMABSType/Begda">
+                <Annotation Term="SAP__common.Label" String="Beginn"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Beginn"/>
+                <Annotation Term="SAP__common.Heading" String="Beginn"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZHRCT_B_CASECMABSType/Endda">
+                <Annotation Term="SAP__common.Label" String="Ende"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Ende"/>
+                <Annotation Term="SAP__common.Heading" String="Ende"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZHRCT_B_CASECMABSType/AnzTage">
+                <Annotation Term="SAP__common.Label" String="Anzahl Tage"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Anzahl Tage"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZHRCT_B_CASECMABSType/Abw9000">
+                <Annotation Term="SAP__common.Label" String="Unfall"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Unfall"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Heading" String="Wahrheitswert"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZHRCT_B_CASECMABSType/Abw9000Prozent">
+                <Annotation Term="SAP__common.Label" String="%"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Prozent"/>
+                <Annotation Term="SAP__common.Heading" String="Vertrags-BG ETHZ"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZHRCT_B_CASECMABSType/Abw9010">
+                <Annotation Term="SAP__common.Label" String="Krankheit"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Krankheit"/>
+                <Annotation Term="SAP__common.IsUpperCase"/>
+                <Annotation Term="SAP__common.Heading" String="Wahrheitswert"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZHRCT_B_CASECMABSType/Abw9010Prozent">
+                <Annotation Term="SAP__common.Label" String="%"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Prozent"/>
+                <Annotation Term="SAP__common.Heading" String="Vertrags-BG ETHZ"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZHRCT_B_CASECMABSType">
+                <Annotation Term="SAP__common.Label" String="Absenzen CM"/>
+                <Annotation Term="SAP__UI.HeaderInfo">
+                    <Record>
+                        <PropertyValue Property="TypeName" String="Abwesenheit"/>
+                        <PropertyValue Property="TypeNamePlural" String="Abwesenheiten"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__UI.LineItem" Qualifier="Abwesenheiten">
+                    <Collection>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Abwesend von"/>
+                            <PropertyValue Property="Value" Path="Begda"/>
+                            <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Abwesend bis"/>
+                            <PropertyValue Property="Value" Path="Endda"/>
+                            <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Anzahl Tage"/>
+                            <PropertyValue Property="Value" Path="AnzTage"/>
+                            <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Unfall"/>
+                            <PropertyValue Property="Value" Path="Abw9000"/>
+                            <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Prozent"/>
+                            <PropertyValue Property="Value" Path="Abw9000Prozent"/>
+                            <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Krankheit"/>
+                            <PropertyValue Property="Value" Path="Abw9010"/>
+                            <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                        </Record>
+                        <Record Type="SAP__UI.DataField">
+                            <PropertyValue Property="Label" String="Prozent"/>
+                            <PropertyValue Property="Value" Path="Abw9010Prozent"/>
+                            <Annotation Term="SAP__UI.Importance" EnumMember="SAP__UI.ImportanceType/High"/>
+                        </Record>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="SAP__UI.PresentationVariant">
+                    <Record>
+                        <PropertyValue Property="SortOrder">
+                            <Collection>
+                                <Record Type="SAP__common.SortOrderType">
+                                    <PropertyValue Property="Property" PropertyPath="Begda"/>
+                                    <PropertyValue Property="Descending" Bool="false"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="Communication.Contact">
+                    <Record/>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="SAP__self.Container/ZHRCT_B_CASECMABS">
+                <Annotation Term="SAP__capabilities.SearchRestrictions">
+                    <Record>
+                        <PropertyValue Property="Searchable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.InsertRestrictions">
+                    <Record>
+                        <PropertyValue Property="Insertable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.DeleteRestrictions">
+                    <Record>
+                        <PropertyValue Property="Deletable" Bool="false"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.UpdateRestrictions">
+                    <Record>
+                        <PropertyValue Property="Updatable" Bool="false"/>
+                        <PropertyValue Property="QueryOptions">
+                            <Record>
+                                <PropertyValue Property="SelectSupported" Bool="true"/>
+                            </Record>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__core.OptimisticConcurrency">
+                    <Collection/>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.FilterRestrictions">
+                    <Record>
+                        <PropertyValue Property="FilterExpressionRestrictions">
+                            <Collection>
+                                <Record>
+                                    <PropertyValue Property="Property" PropertyPath="Abw9000"/>
+                                    <PropertyValue Property="AllowedExpressions" String="MultiValue"/>
+                                </Record>
+                                <Record>
+                                    <PropertyValue Property="Property" PropertyPath="Abw9010"/>
+                                    <PropertyValue Property="AllowedExpressions" String="MultiValue"/>
+                                </Record>
+                            </Collection>
+                        </PropertyValue>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="SAP__self.Container">
+                <Annotation Term="SAP__aggregation.ApplySupported">
+                    <Record>
+                        <PropertyValue Property="Transformations">
+                            <Collection>
+                                <String>aggregate</String>
+                                <String>groupby</String>
+                                <String>filter</String>
+                            </Collection>
+                        </PropertyValue>
+                        <PropertyValue Property="Rollup" EnumMember="SAP__aggregation.RollupType/None"/>
+                    </Record>
+                </Annotation>
+                <Annotation Term="SAP__common.ApplyMultiUnitBehaviorForSortingAndFiltering" Bool="true"/>
+                <Annotation Term="SAP__capabilities.FilterFunctions">
+                    <Collection>
+                        <String>eq</String>
+                        <String>ne</String>
+                        <String>gt</String>
+                        <String>ge</String>
+                        <String>lt</String>
+                        <String>le</String>
+                        <String>and</String>
+                        <String>or</String>
+                        <String>contains</String>
+                        <String>startswith</String>
+                        <String>endswith</String>
+                        <String>any</String>
+                        <String>all</String>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="SAP__capabilities.SupportedFormats">
+                    <Collection>
+                        <String>application/json</String>
+                        <String>application/pdf</String>
+                    </Collection>
+                </Annotation>
+                <Annotation Term="SAP__PDF.Features">
+                    <Record>
+                        <PropertyValue Property="DocumentDescriptionReference" String="../../../../default/iwbep/common/0001/$metadata"/>
+                        <PropertyValue Property="DocumentDescriptionCollection" String="MyDocumentDescriptions"/>
+                        <PropertyValue Property="ArchiveFormat" Bool="true"/>
+                        <PropertyValue Property="Border" Bool="true"/>
+                        <PropertyValue Property="CoverPage" Bool="true"/>
+                        <PropertyValue Property="FitToPage" Bool="true"/>
+                        <PropertyValue Property="FontName" Bool="true"/>
+                        <PropertyValue Property="FontSize" Bool="true"/>
+                        <PropertyValue Property="Margin" Bool="true"/>
+                        <PropertyValue Property="Signature" Bool="true"/>
+                        <PropertyValue Property="ResultSizeDefault" Int="20000"/>
+                        <PropertyValue Property="ResultSizeMaximum" Int="20000"/>
+                    </Record>
+                </Annotation>
+            </Annotations>
+            <Annotations Target="SAP__self.ZHRCT_C_POTENTIAL_CASEType/Begda">
+                <Annotation Term="SAP__common.Label" String="Gültig ab"/>
+                <Annotation Term="SAP__common.Heading" String="Beginn"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Gültigkeitsbeginn"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZHRCT_C_POTENTIAL_CASEType/Endda">
+                <Annotation Term="SAP__common.Label" String="Gültig bis"/>
+                <Annotation Term="SAP__common.Heading" String="Ende"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Gültigkeitsende"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZHRCT_C_POTENTIAL_CASEType/AnzTage">
+                <Annotation Term="SAP__common.Label" String="Anzahl Tage"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZHRCT_C_POTENTIAL_CASEType/Nachn">
+                <Annotation Term="SAP__common.Label" String="Nachname"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZHRCT_C_POTENTIAL_CASEType/Vorna">
+                <Annotation Term="SAP__common.Label" String="Vorname"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZHRCT_C_POTENTIAL_CASEType/NachnVorna">
+                <Annotation Term="SAP__common.Label" String="Nachname/Vorname"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Mitarbeiter Vollständiger Name"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZHRCT_C_POTENTIAL_CASEType/Persk_txt">
+                <Annotation Term="SAP__common.Label" String="MitarbKreisbez."/>
+                <Annotation Term="SAP__common.QuickInfo" String="Mitarbeiterkreis-Bezeichnung"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZHRCT_C_POTENTIAL_CASEType/Plans_stext">
+                <Annotation Term="SAP__common.Label" String="Funktion Bezeichnung"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Funktionsbezeichnung"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZHRCT_C_POTENTIAL_CASEType/Bsgrd">
+                <Annotation Term="SAP__common.Label" String="Beschäftigungsgrad"/>
+                <Annotation Term="SAP__common.Heading" String="BsGrd"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZHRCT_C_POTENTIAL_CASEType/Gbdat">
+                <Annotation Term="SAP__common.Label" String="Geburtstag"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZHRCT_C_POTENTIAL_CASEType/GESCH_TXT">
+                <Annotation Term="SAP__common.Label" String="Geschlecht"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Bezeichnung des Geschlechts"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZHRCT_C_POTENTIAL_CASEType/EINTRITT">
+                <Annotation Term="SAP__common.Label" String="Eintritt"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZHRCT_C_POTENTIAL_CASEType/AUSTRITT">
+                <Annotation Term="SAP__common.Label" String="Austritt"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZHRCT_C_POTENTIAL_CASEType/SBNAME">
+                <Annotation Term="SAP__common.Label" String="Sachbearbeiter"/>
+                <Annotation Term="SAP__common.QuickInfo" String="SB Vollständiger Name"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZHRCT_C_POTENTIAL_CASEType/PCNAME">
+                <Annotation Term="SAP__common.Label" String="HR-Partner/in"/>
+                <Annotation Term="SAP__common.QuickInfo" String="PC Vollständiger Name"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZHRCT_C_POTENTIAL_CASEType/VGNAME">
+                <Annotation Term="SAP__common.Label" String="Vorgesetzer"/>
+                <Annotation Term="SAP__common.QuickInfo" String="VG Vollständiger Name"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZHRCT_C_POTENTIAL_CASEType/HIERARCHY_STEXT_1">
+                <Annotation Term="SAP__common.Label" String="Dep Bezeichnung"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZHRCT_C_POTENTIAL_CASEType/HIERARCHY_STEXT_2">
+                <Annotation Term="SAP__common.Label" String="Institut Bezeichnung"/>
+            </Annotations>
+            <Annotations Target="SAP__self.ZHRCT_C_POTENTIAL_CASEType/ORGEHSTEXT">
+                <Annotation Term="SAP__common.Label" String="Prof Bezeichnung"/>
+                <Annotation Term="SAP__common.Heading" String="Professur Bezeichnung"/>
+                <Annotation Term="SAP__common.QuickInfo" String="Professur Bezeichnung"/>
+            </Annotations>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

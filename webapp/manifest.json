@@ -1,0 +1,168 @@
+{
+  "_version": "1.48.0",
+  "sap.app": {
+    "id": "ch.ethz.apps.sapui5.zhrctpotential4",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:lrop",
+      "version": "1.11.5",
+      "toolsId": "2e621e32-6a9d-42b0-b1a1-6dd56718d12c"
+    },
+    "dataSources": {
+      "mainService": {
+        "uri": "/sap/opu/odata4/sap/zui_ct_potential_o4/srvd/sap/zui_ct_potential/0001/",
+        "type": "OData",
+        "settings": {
+          "annotations": [
+            "annotation"
+          ],
+          "localUri": "localService/metadata.xml",
+          "odataVersion": "4.0"
+        }
+      },
+      "annotation": {
+        "type": "ODataAnnotation",
+        "uri": "annotations/annotation.xml",
+        "settings": {
+          "localUri": "annotations/annotation.xml"
+        }
+      }
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": true,
+    "dependencies": {
+      "minUI5Version": "1.108.22",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {},
+        "sap.ushell": {},
+        "sap.fe.templates": {},
+        "sap.f": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "ch.ethz.apps.sapui5.zhrctpotential4.i18n.i18n"
+        }
+      },
+      "": {
+        "dataSource": "mainService",
+        "preload": true,
+        "settings": {
+          "synchronizationMode": "None",
+          "operationMode": "Server",
+          "autoExpandSelect": true,
+          "earlyRequests": true
+        }
+      },
+      "@i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "uri": "i18n/i18n.properties"
+      }
+    },
+    "resources": {
+      "css": []
+    },
+    "routing": {
+      "config": {
+        "flexibleColumnLayout": {
+          "defaultTwoColumnLayoutType": "TwoColumnsBeginExpanded",
+          "defaultThreeColumnLayoutType": "ThreeColumnsMidExpanded"
+        },
+        "routerClass": "sap.f.routing.Router"
+      },
+      "routes": [
+        {
+          "pattern": ":?query:",
+          "name": "ZHRCT_C_POTENTIAL_CASEList",
+          "target": [
+            "ZHRCT_C_POTENTIAL_CASEList"
+          ]
+        },
+        {
+          "pattern": "ZHRCT_C_POTENTIAL_CASE({key}):?query:",
+          "name": "ZHRCT_C_POTENTIAL_CASEObjectPage",
+          "target": [
+            "ZHRCT_C_POTENTIAL_CASEList",
+            "ZHRCT_C_POTENTIAL_CASEObjectPage"
+          ]
+        }
+      ],
+      "targets": {
+        "ZHRCT_C_POTENTIAL_CASEList": {
+          "type": "Component",
+          "id": "ZHRCT_C_POTENTIAL_CASEList",
+          "name": "sap.fe.templates.ListReport",
+          "options": {
+            "settings": {
+              "contextPath": "/ZHRCT_C_POTENTIAL_CASE",
+              "variantManagement": "Page",
+              "navigation": {
+                "ZHRCT_C_POTENTIAL_CASE": {
+                  "detail": {
+                    "route": "ZHRCT_C_POTENTIAL_CASEObjectPage"
+                  }
+                }
+              }
+            }
+          },
+          "controlAggregation": "beginColumnPages",
+          "contextPattern": ""
+        },
+        "ZHRCT_C_POTENTIAL_CASEObjectPage": {
+          "type": "Component",
+          "id": "ZHRCT_C_POTENTIAL_CASEObjectPage",
+          "name": "sap.fe.templates.ObjectPage",
+          "options": {
+            "settings": {
+              "editableHeaderContent": false,
+              "contextPath": "/ZHRCT_C_POTENTIAL_CASE"
+            }
+          },
+          "controlAggregation": "midColumnPages",
+          "contextPattern": "/ZHRCT_C_POTENTIAL_CASE({key})"
+        }
+      }
+    },
+    "rootView": {
+      "viewName": "sap.fe.templates.RootContainer.view.Fcl",
+      "type": "XML",
+      "async": true,
+      "id": "appRootView"
+    }
+  },
+  "sap.fiori": {
+    "registrationIds": [],
+    "archeType": "transactional"
+  }
+}
